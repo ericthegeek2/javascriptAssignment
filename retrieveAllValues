@@ -1,0 +1,32 @@
+function getAllPropertyValues(obj) {
+    let values = [];
+    let props = new Set();
+    
+    // Traverse the prototype chain
+    while (obj) {
+        // Get own property names and add to the set
+        Object.getOwnPropertyNames(obj).forEach(prop => props.add(prop));
+        // Move up the prototype chain
+        obj = Object.getPrototypeOf(obj);
+    }
+
+    // Collect values of the properties
+    props.forEach(prop => {
+        if (obj[prop] !== undefined) {
+            values.push(obj[prop]);
+        }
+    });
+
+    return values;
+}
+
+// Example usage:
+const exampleObj = Object.create({
+    inheritedProp: 'I am inherited'
+});
+exampleObj.ownProp = 'I am own property';
+
+const result = getAllPropertyValues(exampleObj);
+console.log(result);
+
+
