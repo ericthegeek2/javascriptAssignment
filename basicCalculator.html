@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+
+   <div class="sub-container"> 
+    <div class="heading">
+      <h1>how much does pies costs</h1>
+    </div>
+
+    <div class="inner-container">
+      
+        <form action="#"  class="form">
+          <label for="price">price</label>
+          <input type="text" id="price" name="price">
+          <label for="">quantity</label>
+          <input type="text" id="quantity" name="quantity">
+          <div class="btn">
+           <button type="button" onclick="calculateFunc()">calculate</button> <p id="result"></p>
+            
+          </div>
+        </form>
+
+    </div>
+   </div>
+  </div>
+
+  <Script>
+    function calculateFunc(){
+    const priceInput = document.getElementById('price').value
+    const quantityInput = document.getElementById('quantity').value
+
+    console.log(priceInput);
+    console.log(quantityInput);
+
+
+    const Result = priceInput * quantityInput
+
+    document.getElementById('result').textContent = `$: ${Result}`
+    }
+  </Script>
+</body>
+</html>
