@@ -1,0 +1,42 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+
+ 
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    border: 5px solid whitesmoke;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+
+img{
+    width: 300px;
+    height: 250px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}
+button{
+    width:  80px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    margin-bottom: 10px;
+}
