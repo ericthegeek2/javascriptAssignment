@@ -91,9 +91,24 @@ const product = [
     }
  ]
 
+ async function fetchRecreations(){
+    try{
+         await populatePage()
+    }catch(error){
+        console.log("json data is empty");
+    }
+ }
+
+ 
+
 
 const mainContainer = document.createElement('main')
 document.body.appendChild(mainContainer)
+
+fetchRecreations()
+
+
+function populatePage(){  
 
 product.map((elem) =>{
     const container = document.createElement('div')
@@ -124,4 +139,4 @@ product.map((elem) =>{
     const btn = document.createElement('button')
     container.appendChild(btn)
     btn.textContent = 'Buy now'
-})
+}) }
