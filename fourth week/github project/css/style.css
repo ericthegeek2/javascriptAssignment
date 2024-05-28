@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: beige;
+}
+.searchDiv{
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    
+}
+#btnSubmit{
+    height: 40px;
+    color: white;
+    background-color: black;
+    border: 5px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+#search{
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+.userDetailsDiv{
+    height: calc(100vh - 150px);
+    width: 100vw;
+    background-color: red;
+}
+#userimage{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 20px;
+}
+.userDetailsDiv{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+
+}
+.details{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
